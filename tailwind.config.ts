@@ -11,9 +11,9 @@ const config: Config = {
     extend: {
       fontSize: {
         xxs: [
-          "0.6rem",
+          "0.7rem",
           {
-            lineHeight: "0.5rem",
+            lineHeight: "0.55rem",
           },
         ],
       },

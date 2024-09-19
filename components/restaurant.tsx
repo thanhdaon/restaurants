@@ -41,7 +41,7 @@ export function Restaurant(props: RestaurantProps) {
           </span>
         </div>
       </div>
-      <p className="font-light">{props.description}</p>
+      <p className="font-light text-sm">{props.description}</p>
     </div>
   );
 }

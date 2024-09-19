@@ -3,6 +3,72 @@
 - Nodejs 22
 - Pnpm
 
+## Steps to Run the Project Locally
+
+1. Clone the Project:
+
+   First, clone the project repository to your local machine:
+
+   ```bash
+   git clone <your-repo-url>
+   cd <your-project-directory>
+   ```
+
+2. Install Dependencies:
+
+   Install the required dependencies using pnpm:
+
+   ```bash
+   pnpm install
+   ```
+
+3. Set Up Environment Variables:
+
+   Create a .env file in the root directory of the project (if it's not already present).
+
+   Example .env:
+
+   ```bash
+   POSTGRES_PRISMA_URL= # Neon serverless PostgreSQL connection string
+   POSTGRES_URL_NON_POOLING=
+   ```
+
+4. Generate Prisma Client:
+
+   After setting up the environment variables, generate the Prisma client code:
+
+   ```bash
+   pnpm db:generate
+   ```
+
+   This ensures Prisma is correctly configured with your database schema.
+
+5. Run Database Migrations (for development):
+
+   To apply pending migrations and update the local development database schema, run:
+
+   ```bash
+   pnpm db:migrate-dev
+   ```
+
+6. (Optional) Seed the Database:
+
+   If you want to populate the database with mock data for testing, use the seeding script:
+
+   ```bash
+   pnpm db:seed
+   ```
+
+7. Start the Development Server:
+
+   Now you can start the Next.js development server with hot-reloading enabled:
+
+   ```bash
+   pnpm dev
+   ```
+
+   This will run the server on http://localhost:3000 (by default). You should now be able to access the application in your browser.
+
 ## Scripts
 
 ### `dev`
